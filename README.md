@@ -1,4 +1,4 @@
-# Ohjelmistotekniikka
+# Ohjelmistotekniikka, harjoitustyö
 
 ## Viikko 1:
 

@@ -1,11 +1,9 @@
-# Tervetuloa!
+# Ohjelmistotekniikka
 
-## Seuraa tiedotus:
+## Viikko 1:
 
-**Tästä lähtee**
+__Linkit tehtäviin:__
+* [gitlog.txt](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
+* [komentorivi.txt](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
 
-* tervetuloa
-* tähän
-* tiedostoon
-
-_*readme!*_
+*Kiitos!*

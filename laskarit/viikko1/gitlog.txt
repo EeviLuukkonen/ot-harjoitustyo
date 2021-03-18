@@ -1,0 +1,122 @@
+commit 7719b6762af5132de6f57abc896b7d1605f63521
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:35:38 2021 +0200
+
+    poistettiin file1 ja muutettiin file2 nimi file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6bf9412ee1dbec13816c2cf0c7e08e421d9d24fd
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:30:09 2021 +0200
+
+    lisattiin kansio tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 1a1bea06b19b0043370d2e2099cb8bf77e7f55c5
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:19:41 2021 +0200
+
+    muutoksia tiedostoihin
+
+ eka.txt    | 44 ++------------------------------------------
+ kolmas.txt |  4 +++-
+ 2 files changed, 5 insertions(+), 43 deletions(-)
+
+commit c2de97208eeb1a938c4cfbed50e93f65e2374f45
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:16:36 2021 +0200
+
+    poisto
+
+ tiedosto.txt | 4556 ----------------------------------------------------------
+ 1 file changed, 4556 deletions(-)
+
+commit f39e18588d1e1ec96807e7cbfda1ef34c2e2f8af
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:15:46 2021 +0200
+
+    nimenmuutos
+
+ eka.txt | 4556 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 4556 insertions(+)
+
+commit 1bd1535e74da73fbabf89e88cd856cfd1e370050
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:14:02 2021 +0200
+
+    poistettiin toinen.txt
+
+ toinen.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit d3e7b4ffcf3d487cab356aae95a8573f342ef30e
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:10:36 2021 +0200
+
+    bemovie script modified in tiedosto.txt
+
+ tiedosto.txt | 12 ------------
+ 1 file changed, 12 deletions(-)
+
+commit 13901d41ae883c70c74ab93960d0b8558b7b63e9
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 16:08:02 2021 +0200
+
+    bemovie script added to tiedosto.txt
+
+ tiedosto.txt | 4566 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 4566 insertions(+)
+
+commit 4e01ba4c4a331f570fe1aced2e5a7adf5dc3c860
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 14:41:36 2021 +0200
+
+    tehtiin hakemisto stuff ja sen sisälle tiedosto jokintiedosto.txt
+
+ stuff/jokintiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ff2a138e0a2d54a111cea60b78bd1abfb9ed5f8e
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 14:39:07 2021 +0200
+
+    muokattiin tiedostoja toinen.txt ja kolmas.txt
+
+ kolmas.txt | 1 +
+ toinen.txt | 3 +++
+ 2 files changed, 4 insertions(+)
+
+commit 77a36860f13cb28aea8fbf56681e96d63ac24ff9
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 14:37:23 2021 +0200
+
+    luotiin kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4eda7c573ce42433b20bb499160ee11085e585f1
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 14:32:52 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 2 ++
+ toinen.txt   | 0
+ 2 files changed, 2 insertions(+)
+
+commit 4c2152f4f63fa8dcbf9e4ad07039720cc206c370
+Author: Eevi Luukkonen <eevi.luukkonen@gmail.com>
+Date:   Wed Mar 17 14:28:03 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)

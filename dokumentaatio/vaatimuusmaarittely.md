@@ -1,6 +1,6 @@
-## Vaatimusmäärittely
+# Vaatimusmäärittely
 
-# Sovelluksen tarkoitus
+## Sovelluksen tarkoitus
 
 Sovellus on tunnettu klassikkopeli Tetris. Tetriksessä on kaksiulotteinen pelikenttä, jossa putoilevista palikoista pyritään rakentamaan vaakasuoria rivejä pelikentän pohjalle. Palikoita voi käännellä ja siirtää haluamaansa asentoon ja kohtaan nuolinäppäimillä palikan vielä ollessa liikkeessä. Jos onnistuu muodostamaan palikoista täyden vaakasuoran rivin, se poistuu ja sitä ylemmät rivit putoavat alemmaksi. Pelin päättyy, jos pelikenttä täyttyy palikoitsta.
 

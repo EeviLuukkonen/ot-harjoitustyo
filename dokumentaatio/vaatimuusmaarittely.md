@@ -9,9 +9,8 @@ Sovellus on tunnettu klassikkopeli Tetris. Tetriksessä on kaksiulotteinen pelik
 * Käyttäjä näkee laatikoista koostuvan pelikentän, joka on pelin alussa tyhjä.
 * Kentän yläosasta putoaa jokin seitsemästä palikkamuodosta.
 * Käyttäjä voi kääntää palikkaa painamalla nuolinäppäintä ylös.
-* Käyttäjä voi liikuttaa palikkaa nuolinäppääimillä oikealle ja vasemmalle.
+* Käyttäjä voi liikuttaa palikkaa nuolinäppäimillä oikealle ja vasemmalle.
 * Osuessaan pelikentän pohjalle tai toiseen palikkaan palikka pysähtyy ja ylhäältä syötetään uusi palikka.
-* Peli päättyy, jos palikat yltävät pelikentän ylös saakka.
 * Peli päättyy, jos palikat yltävät pelikentän ylös saakka.
 
 

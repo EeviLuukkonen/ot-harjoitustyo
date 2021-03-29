@@ -4,7 +4,7 @@
 
 Sovellus on tunnettu klassikkopeli Tetris. Tetriksessä on kaksiulotteinen pelikenttä, jossa putoilevista palikoista pyritään rakentamaan vaakasuoria rivejä pelikentän pohjalle. Palikoita voi käännellä ja siirtää haluamaansa asentoon ja kohtaan nuolinäppäimillä palikan vielä ollessa liikkeessä. Jos onnistuu muodostamaan palikoista täyden vaakasuoran rivin, se poistuu ja sitä ylemmät rivit putoavat alemmaksi. Pelin päättyy, jos pelikenttä täyttyy palikoitsta.
 
-# Perusversion tarjoama toiminnallisuus
+## Perusversion tarjoama toiminnallisuus
 
 * Käyttäjä näkee laatikoista koostuvan pelikentän, joka on pelin alussa tyhjä.
 * Kentän yläosasta putoaa jokin seitsemästä palikkamuodosta.
@@ -15,7 +15,7 @@ Sovellus on tunnettu klassikkopeli Tetris. Tetriksessä on kaksiulotteinen pelik
 * Peli päättyy, jos palikat yltävät pelikentän ylös saakka.
 
 
-# Jatkokehitysideoita
+## Jatkokehitysideoita
 
 * Jos palikat muodostavat täyden vaakarivin, rivi poistuu.
 * Kirjautumismahdollisuus

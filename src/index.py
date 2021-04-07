@@ -3,6 +3,7 @@ from load_images import load_images
 import pygame
 from display import Display
 from gameloop import Gameloop
+from clock import Clock
 
 def main():
     pygame.init()
@@ -10,9 +11,12 @@ def main():
     height = 700
     display = pygame.display.set_mode((width,height))
     images = load_images()
+    status = 0
+    word = "VOI"
+    clock = Clock()
     letters = letter_positions(width, height)
-    renderer = Display(display, width, height, images, letters)
-    gameloop = Gameloop(renderer, letters)
+    renderer = Display(display, width, height, images, letters, word)
+    gameloop = Gameloop(renderer, word, letters, status, clock)
 
     gameloop.start()
 

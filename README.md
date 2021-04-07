@@ -1,4 +1,4 @@
-# Tetris
+# Hirsipuu
 
 ## Viikko 2:
 

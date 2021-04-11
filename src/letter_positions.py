@@ -10,8 +10,10 @@ def letter_positions(width, height):
         y =starty+ i//7 * (gap+rad*2)
         if i <=25:
             letters.append([x,y,chr(65+i), False])
+        #letter ä
         elif i == 26:
             letters.append([x,y,chr(196), False])
+        #letter ö
         elif i == 27:
             letters.append([x,y,chr(214), False])
          

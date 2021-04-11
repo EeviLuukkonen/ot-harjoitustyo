@@ -17,10 +17,11 @@ class Display():
         self.display.blit(text, (self.width/2 - text.get_width()/2, 30))
         return font
 
-
-    def draw_display(self, status, guessed):
+    def draw_image(self,status,x,y):
         #draw hangman
-        self.display.blit(self.images[status], (60, 150))
+        self.display.blit(self.images[status], (x,y))
+
+    def draw_display(self, guessed):
 
         #draw buttons and letters
         for letter in self.letters:
@@ -39,7 +40,7 @@ class Display():
             else:
                 display_word += "_ "
         display_text = word_font.render(display_word, 1, (0,0,0))
-        self.display.blit(display_text, (250,300))
+        self.display.blit(display_text, (300,300))
 
         pygame.display.update()
 

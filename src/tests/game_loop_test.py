@@ -40,8 +40,7 @@ class StubDisplay:
     def render_loosescreen(self):
         pass
 
-
-#(display: Display, word: str, letters: list, status: int, clock: Clock)
+#(display: Display, word: str, letters: list, status: int, clock: Clock, event_queue: EventQueue)
 class TestGameloop(unittest.TestCase):
     def setUp(self):
         self.word = "ab"

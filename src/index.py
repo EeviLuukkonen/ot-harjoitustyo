@@ -5,6 +5,7 @@ import pygame
 from display import Display
 from gameloop import Gameloop
 from clock import Clock
+import random
 
 def main():
     pygame.init()
@@ -13,7 +14,9 @@ def main():
     display = pygame.display.set_mode((width,height))
     images = load_images()
     status = 0
-    word = "VOI"
+    # sql-wordlist will be added later
+    words = ["VOI", "XYLOFONI", "KESKIAIKA", "PANIIKKI", "PYTHON", "KESÄLOMA"]
+    word = random.choice(words)
     clock = Clock()
     event_queue = EventQueue()
     letters = letter_positions(width, height)

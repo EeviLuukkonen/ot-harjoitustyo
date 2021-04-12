@@ -10,6 +10,7 @@ Sovellus on testattu versiolla 3.8.5. Toimivaan sovellukseen vaaditaan vähintä
 
 ## Dokumentaatio
 
+* [käyttöohje](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 * [vaatimusmäärittely](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimuusmaarittely.md)
 * [työaikakirjanpito](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 

@@ -45,3 +45,16 @@ class Display():
         pygame.display.update()
 
         return display_word
+
+    def render_winscreen(self):
+        font = self.draw_window()
+        text = font.render("Voitit!", 1, (224,3,65))
+        self.display.blit(text, (self.width/2 - text.get_width()/2, self.height/2 - text.get_height()/2))
+        pygame.display.update()
+
+    def render_loosescreen(self):
+        font = self.draw_window()
+        text = font.render("Hävisit!", 1, (224,3,65))
+        self.display.blit(text, (self.width/2 - text.get_width()/2, 200))
+        self.draw_image(6, 200, self.height/2)
+        pygame.display.update()

@@ -1,10 +1,48 @@
 # Hirsipuu
 
-## Viikko 2:
+(Huom! Aihe vaihdettu - aiemmin tetris)
 
-__Laskari:__
-* [coverage report](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/laskarit/viikko2/Screenshot%20from%202021-03-28%2018-12-03.png)
+Sovellus on hirsipuu-peli, jossa pelaaja arvailee suomenkielistä sanaa pelialueella näkyvistä kirjaimista klikkailemalla. Tavoite on keksiä oikea sana, ennen kuin ukko joutuu hirteen.
 
-__Harjoitustyö__
-* [määrittelydokumentti](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimuusmaarittely.md)
+## Python-versio
+
+Sovellus on testattu versiolla 3.8.5. Toimivaan sovellukseen vaaditaan vähintään versio 3.6.0.
+
+## Dokumentaatio
+
+* [vaatimusmäärittely](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimuusmaarittely.md)
 * [työaikakirjanpito](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
+
+## Sovelluksen asentaminen ja avaaminen
+
+1. Asenna riippuvuudet terminaalin komennolla
+
+```bash
+poetry install
+```
+
+2. Alusta sovellus komennolla
+
+```bash
+poetry run invoke build
+```
+
+3. Käynnistä sovellus komennolla
+
+```bash
+poetry run invoke start
+```
+
+## Testaus
+
+1. Suorita testit komennolla
+
+```bash
+poetry run invoke test
+```
+
+2. Luo testikattavuusraportti komennolla
+
+```bash
+poetry run invoke coverage-report
+```

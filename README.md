@@ -22,13 +22,7 @@ Sovellus on testattu versiolla 3.8.5. Toimivaan sovellukseen vaaditaan vähintä
 poetry install
 ```
 
-2. Alusta sovellus komennolla
-
-```bash
-poetry run invoke build
-```
-
-3. Käynnistä sovellus komennolla
+2. Käynnistä sovellus komennolla
 
 ```bash
 poetry run invoke start

@@ -15,14 +15,13 @@ def main():
     images = load_images()
     status = 0
     # sql-wordlist will be added later
-    words = ["VOI", "XYLOFONI", "KESKIAIKA", "PANIIKKI", "PYTHON", "KESÄLOMA"]
-    word = random.choice(words)
     clock = Clock()
     event_queue = EventQueue()
     letters = letter_positions(width, height)
-    renderer = Display(display, width, height, images, letters, word)
-    gameloop = Gameloop(renderer, word, letters, status, clock, event_queue)
+    renderer = Display(display, width, height, images, letters)
+    gameloop = Gameloop(renderer, letters, status, clock, event_queue)
 
+    gameloop.menu()
     gameloop.start()
 
 

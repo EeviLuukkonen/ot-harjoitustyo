@@ -1,38 +1,55 @@
+from tests.words import words
 from clock import Clock
 from display import Display
 import pygame
 import math
 
 class Gameloop():
-    def __init__(self, display: Display, word: str, letters: list, status: int, clock: Clock, event_queue):
+    def __init__(self, display: Display, letters: list, status: int, clock: Clock, event_queue):
         self.display = display
         self.letters = letters
         self.status = status
-        self.word = word
         self.guessed = []
         self.clock = clock
         self.event_queue = event_queue
 
-    def start(self):
+    def menu(self):
         while True:
-            if self.check_if_won():
+            self.display.draw_window()
+            positions = self.display.draw_menu()
+            if self.menu_events(positions) == False:
+                pygame.quit()
+                break
+
+    def menu_events(self, positions):
+        for event in self.event_queue.get():
+                if event.type == pygame.QUIT:
+                        return False
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    pos = pygame.mouse.get_pos()
+                    for level in range(3):
+                        if positions[level][0]+positions[level][2] > pos[0] > positions[level][0] and positions[level][1]+positions[level][3] > pos[1] > positions[level][1]:
+                            word = words(level)
+                            self.start(word)
+    
+    def start(self, word):
+        while True:
+            if self.check_if_won(word):
                 self.win()
             elif self.check_if_lost():
                 self.loose()
             else: #render game
                 self.display.draw_window()
                 self.display.draw_image(self.status, 60, 150)
-
-                self.game = self.display.draw_display(self.guessed)
+                self.game = self.display.draw_display(self.guessed, word)
             #chech events
-            if self.events() == False:
+            if self.events(word) == False:
                 pygame.quit()
                 break 
-
             self.clock.tick()
 
-    def check_if_won(self):
-        for i in self.word:
+    def check_if_won(self, word):
+        for i in word:
             if i not in self.guessed:
                 return False
         return True
@@ -41,7 +58,7 @@ class Gameloop():
         if self.status == 6:
             return True
             
-    def events(self):
+    def events(self, word):
         for event in self.event_queue.get():
                 if event.type == pygame.QUIT:
                         return False
@@ -52,7 +69,7 @@ class Gameloop():
                         if distance < 20 and letter[2] not in self.guessed:
                             letter[3] = True
                             self.guessed.append(letter[2])
-                            if letter[2] not in self.word:
+                            if letter[2] not in word:
                                 self.status += 1
 
     def win(self):

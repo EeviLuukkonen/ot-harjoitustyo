@@ -33,7 +33,7 @@ class StubDisplay:
         return pygame.font.SysFont("Chilanka", 60)
     def draw_image(self,status,x,y):
         pass
-    def draw_display(self, guessed):
+    def draw_display(self, guessed, word):
         return "_ _"
     def render_winscreen(self):
         pass
@@ -43,15 +43,14 @@ class StubDisplay:
 #(display: Display, word: str, letters: list, status: int, clock: Clock, event_queue: EventQueue)
 class TestGameloop(unittest.TestCase):
     def setUp(self):
-        self.word = "ab"
         self.letters = letter_positions.letter_positions(600,700)
         self.display = StubDisplay()
     def test_game_lost(self):
         events = [StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.word, self.letters, 6, StubClock(), StubEventQueue(events))
+        game = Gameloop(self.display, self.letters, 6, StubClock(), StubEventQueue(events))
 
-        game.start()
+        game.start("AB")
 
         self.assertTrue(game.check_if_lost())
 

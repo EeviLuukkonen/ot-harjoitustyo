@@ -1,7 +1,5 @@
 # Hirsipuu
 
-(Huom! Aihe vaihdettu - aiemmin tetris)
-
 Sovellus on hirsipuu-peli, jossa pelaaja arvailee suomenkielistä sanaa pelialueella näkyvistä kirjaimista klikkailemalla. Tavoite on keksiä oikea sana, ennen kuin ukko joutuu hirteen.
 
 ## Python-versio
@@ -10,6 +8,7 @@ Sovellus on testattu versiolla 3.8.5. Toimivaan sovellukseen vaaditaan vähintä
 
 ## Dokumentaatio
 
+* [arkkitehtuurikuvaus](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuurikuvaus.md)
 * [käyttöohje](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 * [vaatimusmäärittely](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimuusmaarittely.md)
 * [työaikakirjanpito](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
@@ -40,4 +39,9 @@ poetry run invoke test
 
 ```bash
 poetry run invoke coverage-report
+```
+3. Koodin laaturaportin saa komennolla
+
+```bash
+poetry run invoke lint
 ```

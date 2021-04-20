@@ -1,7 +1,7 @@
 from gamelogic.event_queue import EventQueue
 from gamelogic.letter_positions import letter_positions
 import pygame
-from ui.load_images import load_images
+from images.load_images import load_images
 from ui.display import Display
 from gamelogic.gameloop import Gameloop
 from gamelogic.clock import Clock

@@ -1,10 +1,10 @@
-from event_queue import EventQueue
-from letter_positions import letter_positions
+from gamelogic.event_queue import EventQueue
+from gamelogic.letter_positions import letter_positions
 import pygame
-from load_images import load_images
-from display import Display
-from gameloop import Gameloop
-from clock import Clock
+from ui.load_images import load_images
+from ui.display import Display
+from gamelogic.gameloop import Gameloop
+from gamelogic.clock import Clock
 
 
 def main():

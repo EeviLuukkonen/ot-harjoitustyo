@@ -11,16 +11,25 @@ class Display():
     def draw_menu(self):
         positions = []
         font = pygame.font.SysFont("Arial", 30)
+        font2 = pygame.font.SysFont("Comicsans", 25)
+        #levels
         valitse = font.render("Valitse vaikeustaso:", 1, (0, 0, 0))
         helppo = font.render("Helppo", 1, (0, 0, 0))
         keskivaikea = font.render("Keskivaikea", 1, (0, 0, 0))
         vaikea = font.render("Vaikea", 1, (0, 0, 0))
         list = [helppo, keskivaikea, vaikea]
+        #end game
+        self.display.blit(font2.render("Lopeta peli", 1, (0, 0, 0)), (self.width-100,20))
+        pygame.draw.line(self.display, (0, 0, 0), (self.width-45,21),(self.width-30,6), 3)
+        pygame.draw.line(self.display, (0, 0, 0), (self.width-40,5),(self.width-30,5), 2)
+        pygame.draw.line(self.display, (0, 0, 0), (self.width-30,5),(self.width-30,15), 2)
+        #draw levels
         self.display.blit(valitse, (self.width/2 - valitse.get_width()/2, 180))
         self.display.blit(helppo, (self.width/2 - helppo.get_width()/2, 300))
         self.display.blit(keskivaikea, (self.width/2 -
                           keskivaikea.get_width()/2, 400))
         self.display.blit(vaikea, (self.width/2 - vaikea.get_width()/2, 500))
+        #draw rectangles
         for i in range(1, 4):
             pygame.draw.rect(self.display, (0, 0, 0), pygame.Rect(
                 self.width/2-list[i-1].get_width()/2-10, 185+i*100, list[i-1].get_width()+20, 60), 2)
@@ -31,6 +40,7 @@ class Display():
 
     def draw_window(self):
         # draw window
+        pygame.display.set_caption("Hirsipuu")
         self.display.fill((255, 255, 255))
         font = pygame.font.SysFont("Chilanka", 60)
         text = font.render("Hirsipuu", 1, (0, 0, 0))
@@ -42,6 +52,7 @@ class Display():
         self.display.blit(self.images[status], (x, y))
 
     def draw_display(self, guessed, word):
+        self.draw_newword()
         # draw buttons and letters
         for letter in self.letters:
             if letter[3] is False:
@@ -67,6 +78,7 @@ class Display():
 
     def render_winscreen(self):
         font = self.draw_window()
+        self.draw_newword()
         text = font.render("Voitit!", 1, (224, 3, 65))
         self.display.blit(
             text, (self.width/2 - text.get_width()/2, self.height/2 - text.get_height()/2))
@@ -74,7 +86,15 @@ class Display():
 
     def render_loosescreen(self):
         font = self.draw_window()
+        self.draw_newword()
         text = font.render("Hävisit!", 1, (224, 3, 65))
         self.display.blit(text, (self.width/2 - text.get_width()/2, 200))
         self.draw_image(6, 200, self.height/2)
         pygame.display.update()
+
+    def draw_newword(self):
+        font = pygame.font.SysFont("Comicsans", 25)
+        self.display.blit(font.render("Uusi sana", 1, (0, 0, 0)), (self.width-100,20))
+        pygame.draw.line(self.display, (0, 0, 0), (self.width-45,21),(self.width-30,6), 3)
+        pygame.draw.line(self.display, (0, 0, 0), (self.width-40,5),(self.width-30,5), 2)
+        pygame.draw.line(self.display, (0, 0, 0), (self.width-30,5),(self.width-30,15), 2)

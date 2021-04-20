@@ -1,8 +1,8 @@
 import math
 import pygame
-from words import words
-from clock import Clock
-from display import Display
+from gamelogic.words import words
+from gamelogic.clock import Clock
+from ui.display import Display
 
 
 class Gameloop():
@@ -46,7 +46,6 @@ class Gameloop():
             self.clock.tick()
             # check events
             if self.events(word) is False:
-                pygame.quit()
                 break
             
     def check_if_won(self, word):

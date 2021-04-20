@@ -1,7 +1,7 @@
 import unittest
 import pygame
-from gameloop import Gameloop
-import letter_positions
+from gamelogic.gameloop import Gameloop
+from gamelogic.letter_positions import letter_positions
 
 class StubClock:
     def tick(self):
@@ -46,7 +46,7 @@ class StubDisplay:
 # (display: Display, word: str, letters: list, status: int, clock: Clock, event_queue: EventQueue)
 class TestGameloop(unittest.TestCase):
     def setUp(self):
-        self.letters = letter_positions.letter_positions(600, 700)
+        self.letters = letter_positions(600, 700)
         self.display = StubDisplay()
 
     def test_game_lost(self):

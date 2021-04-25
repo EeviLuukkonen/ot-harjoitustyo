@@ -21,12 +21,15 @@ class Menu:
                 break
 
     def menu_events(self, positions):
+        letters = []
+        word = ""
         for event in self.event_queue.get():
             if event.type == pygame.QUIT:
                 return False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = self.event_queue.get_pos()
                 words = word_repository()
+                print(pos)
                 if positions[0][0]+positions[0][2] > pos[0] > positions[0][0] and positions[0][1]+positions[0][3] > pos[1] > positions[0][1]:
                     word = words.easy_word()
                     letters = letter_positions(self.width,self.height)

@@ -1,6 +1,6 @@
 import math
 import pygame
-from gamelogic.words import words
+from words.config import word_repository
 from gamelogic.clock import Clock
 from ui.display import Display
 
@@ -28,10 +28,16 @@ class Gameloop():
                 return False
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = self.event_queue.get_pos()
-                for level in range(3):
-                    if positions[level][0]+positions[level][2] > pos[0] > positions[level][0] and positions[level][1]+positions[level][3] > pos[1] > positions[level][1]:
-                        word = words(level)
-                        self.start(word)
+                words = word_repository()
+                if positions[0][0]+positions[0][2] > pos[0] > positions[0][0] and positions[0][1]+positions[0][3] > pos[1] > positions[0][1]:
+                    word = words.easy_word()
+                elif positions[1][0]+positions[1][2] > pos[0] > positions[1][0] and positions[1][1]+positions[1][3] > pos[1] > positions[1][1]:
+                    word = words.medium_word()
+                elif positions[0][0]+positions[2][2] > pos[0] > positions[2][0] and positions[2][1]+positions[2][3] > pos[1] > positions[2][1]:
+                    word = words.hard_word()
+                self.status = 0
+                self.guessed = []
+                self.start(word.upper())
 
     def start(self, word):
         while True:
@@ -66,8 +72,7 @@ class Gameloop():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = self.event_queue.get_pos()
                 for letter in self.letters:
-                    distance = math.sqrt(
-                        (letter[0]-pos[0])**2+(letter[1]-pos[1])**2)
+                    distance = math.sqrt((letter[0]-pos[0])**2+(letter[1]-pos[1])**2)
                     if distance < 20 and letter[2] not in self.guessed:
                         letter[3] = True
                         self.guessed.append(letter[2])

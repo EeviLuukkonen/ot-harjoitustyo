@@ -1,11 +1,10 @@
 import pygame
 
 class Display():
-    def __init__(self, display, width, height, images, letters):
+    def __init__(self, display, width, height, images):
         self.display = display
         self.width = width
         self.images = images
-        self.letters = letters
         self.height = height
 
     def draw_menu(self):
@@ -51,26 +50,25 @@ class Display():
         # draw hangman
         self.display.blit(self.images[status], (x, y))
 
-    def draw_display(self, guessed, word):
+    def draw_display(self, guessed, word, letters):
         self.draw_newword()
         # draw buttons and letters
-        for letter in self.letters:
+        for letter in letters:
             if letter[3] is False:
-                pygame.draw.circle(self.display, (0, 0, 0),
-                                   (letter[0], letter[1]), 20, 2)
+                pygame.draw.circle(self.display, (0, 0, 0),(letter[0], letter[1]), 20, 2)
                 letter_font = pygame.font.SysFont("Chilanka", 30)
                 letter_text = letter_font.render(letter[2], 1, (0, 0, 0))
                 self.display.blit(letter_text, (letter[0]-12, letter[1]-12))
         # draw word
         display_word = ""
-        word_font = pygame.font.SysFont("Arial", 30)
+        word_font = pygame.font.SysFont("Arial", 25)
         for i in word:
             if i in guessed:
                 display_word += i + " "
             else:
                 display_word += "_ "
         display_text = word_font.render(display_word, 1, (0, 0, 0))
-        self.display.blit(display_text, (300, 300))
+        self.display.blit(display_text, (270, 240))
 
         pygame.display.update()
 

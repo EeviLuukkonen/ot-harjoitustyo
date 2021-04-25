@@ -4,24 +4,19 @@ import pygame
 from images.load_images import load_images
 from ui.display import Display
 from gamelogic.gameloop import Gameloop
-from gamelogic.clock import Clock
-
+from gamelogic.menu import Menu
 
 def main():
     pygame.init()
     width = 600
     height = 700
-    display = pygame.display.set_mode((width, height))
+    win = pygame.display.set_mode((width, height))
     images = load_images()
-    status = 0
-    # sql-wordlist will be added later
-    clock = Clock()
     event_queue = EventQueue()
     letters = letter_positions(width, height)
-    renderer = Display(display, width, height, images, letters)
-    gameloop = Gameloop(renderer, letters, status, clock, event_queue)
-
-    gameloop.menu()
+    display = Display(win, width, height, images)
+    menu = Menu(display, event_queue, width, height)
+    menu.menu()
 
 
 if __name__ == "__main__":

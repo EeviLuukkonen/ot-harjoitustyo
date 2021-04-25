@@ -12,3 +12,4 @@
 | 20.4. | 3h   |  arkkitehtuurikuvaus, rakenteen, vaatimusmäärittelyn ja readmen päivitys, pylint- ja ulkoasuparannus |
 | 24.4. | 1h   |  words.txt-tiedosto sanojen valintaan lisätty  | 
 | 25.4. | 3h   |  menu siirretty omaan tiedostoon, toiminnallisuusparannuksia |
+| yhteensä:  | 26h

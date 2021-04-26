@@ -11,7 +11,7 @@ Sovelluksen pakkausrakenne on tällä hetkellä seuraava:
 Sovelluksen käyttöliittymä on toteutettu hakemiston ui luokkaan Display ja sisältää neljä erilaista näkymää:
 
 - tasovalikko
-- pelitilan
+- pelitila
 - voittoruutu
 - häviöruutu
 
@@ -25,4 +25,4 @@ Sovelluksen avaaminen muodostaa seuraavanlaisen tapahtumaketjun. Oletetaan käyt
 
 ![IMG_2066](https://user-images.githubusercontent.com/75749790/116063586-cf182e00-a68d-11eb-9b94-49d8b703bdf2.jpg)
 
-Menu lähettää UI:lle määräyksen piirtää valikkonäkymä. Käyttäen valitessa tason _Vaikea_ menu arpoo WordRepository-luokassa 4-5 merkkiä pitkän sanan, minkä jälkeen luodaan Gameloop-olio ja aloitetaan peli arvotulla sanalla. Käyttäjän onnistuessa pelissä luo UI voittoruudun, hävitessä häviöruudun. Rastista painamalla pelitila palaa takaisin valikkoon.
+Menu lähettää UI:lle määräyksen piirtää valikkonäkymä. Käyttäjän valitessa tason _Vaikea_ menu arpoo WordRepository-luokassa 4-5 merkkiä pitkän sanan, minkä jälkeen luodaan Gameloop-olio ja aloitetaan peli arvotulla sanalla. Käyttäjän onnistuessa pelissä luo UI voittoruudun, hävitessä häviöruudun. Rastista painamalla pelitila palaa takaisin valikkoon.

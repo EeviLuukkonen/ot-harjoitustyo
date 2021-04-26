@@ -16,6 +16,6 @@ Sovellus on klassinen arvauspeli hirsipuu. Pelissä arvataan kirjain kirjaimelta
 ## Jatkokehitysideoita
 
 - [x] Peli avaa valikon, josta pääsee valitsemaan vaikeusasteen kolmesta tasosta
-- [ ] Pelattavat sanat haetaan tietokannasta vaikeustason mukaan
+- [x] Pelattavat sanat haetaan erillisestä tiedostosta vaikeustason mukaan
 - [ ] Aikaominaisuus: Mitä nopeammin sanan selvittää, sen parempi
 - [ ] Ennätysaikojen tallentaminen tietokantaan

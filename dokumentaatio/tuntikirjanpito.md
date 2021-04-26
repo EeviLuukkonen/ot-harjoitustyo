@@ -11,5 +11,5 @@
 | 19.4. | 2h   |  3 uutta testiä  |
 | 20.4. | 3h   |  arkkitehtuurikuvaus, rakenteen, vaatimusmäärittelyn ja readmen päivitys, pylint- ja ulkoasuparannus |
 | 24.4. | 1h   |  words.txt-tiedosto sanojen valintaan lisätty  | 
-| 25.4. | 3h   |  menu siirretty omaan tiedostoon, toiminnallisuusparannuksia |
-| yhteensä:  | 26h
+| 25.4. | 4h   |  3 uutta testiä, pylint-parannus, menu siirretty omaan kansioon, toiminnallisuusparannuksia |
+| yhteensä:  | 27h

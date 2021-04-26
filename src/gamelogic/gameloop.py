@@ -23,7 +23,7 @@ class Gameloop():
             # check events
             if self.events(word) is False:
                 break
-            
+
     def check_if_won(self, word):
         for i in word:
             if i not in self.guessed:
@@ -48,6 +48,7 @@ class Gameloop():
                         self.guessed.append(letter[2])
                         if letter[2] not in word:
                             self.status += 1
+        return True
 
     def win(self):
         self.display.render_winscreen()

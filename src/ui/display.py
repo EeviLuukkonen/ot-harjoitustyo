@@ -9,21 +9,24 @@ class Display():
 
     def draw_menu(self):
         positions = []
-        font = pygame.font.SysFont("Arial", 30)
-        font2 = pygame.font.SysFont("Comicsans", 25)
+        font = pygame.font.SysFont("Linux Biolinum Keyboard O", 35,bold=False, italic=False)
+        font1 = pygame.font.SysFont("latoheavy", 40)
+        font2 = pygame.font.SysFont("arial", 17, bold = True)
         #levels
-        valitse = font.render("Valitse vaikeustaso:", 1, (0, 0, 0))
-        helppo = font.render("Helppo", 1, (0, 0, 0))
-        keskivaikea = font.render("Keskivaikea", 1, (0, 0, 0))
-        vaikea = font.render("Vaikea", 1, (0, 0, 0))
+        valitse = font.render("VALITSE", 1, (53, 34, 12))
+        vaikeustaso = font.render("VAIKEUSTASO", 1, (53, 34, 12))
+        helppo = font1.render("HELPPO", 1, (53, 34, 12))
+        keskivaikea = font1.render("KESKIVAIKEA", 1, (53, 34, 12))
+        vaikea = font1.render("VAIKEA", 1, (53, 34, 12))
         list = [helppo, keskivaikea, vaikea]
         #end game
-        self.display.blit(font2.render("Lopeta peli", 1, (0, 0, 0)), (self.width-100,20))
-        pygame.draw.line(self.display, (0, 0, 0), (self.width-45,21),(self.width-30,6), 3)
-        pygame.draw.line(self.display, (0, 0, 0), (self.width-40,5),(self.width-30,5), 2)
-        pygame.draw.line(self.display, (0, 0, 0), (self.width-30,5),(self.width-30,15), 2)
+        self.display.blit(font2.render("lopeta peli", 1, (0, 0, 0)), (self.width-100,20))
+        pygame.draw.line(self.display, (53, 34, 12), (self.width-45,21),(self.width-30,6), 3)
+        pygame.draw.line(self.display, (53, 34, 12), (self.width-40,5),(self.width-30,5), 2)
+        pygame.draw.line(self.display, (53, 34, 12), (self.width-30,5),(self.width-30,15), 2)
         #draw levels
-        self.display.blit(valitse, (self.width/2 - valitse.get_width()/2, 180))
+        self.display.blit(valitse, (self.width/2 - valitse.get_width()/2, 160))
+        self.display.blit(vaikeustaso, (self.width/2 - vaikeustaso.get_width()/2, 190))
         self.display.blit(helppo, (self.width/2 - helppo.get_width()/2, 300))
         self.display.blit(keskivaikea, (self.width/2 -
                           keskivaikea.get_width()/2, 400))
@@ -31,7 +34,7 @@ class Display():
         #draw rectangles
         for i in range(1, 4):
             pygame.draw.rect(self.display, (0, 0, 0), pygame.Rect(
-                self.width/2-list[i-1].get_width()/2-10, 185+i*100, list[i-1].get_width()+20, 60), 2)
+                self.width/2-list[i-1].get_width()/2-10, 185+i*100, list[i-1].get_width()+20, 60), 3)
             positions.append([self.width/2-list[i-1].get_width() /
                              2-10, 185+i*100, list[i-1].get_width()+20, 60])
         pygame.display.update()
@@ -40,9 +43,9 @@ class Display():
     def draw_window(self):
         # draw window
         pygame.display.set_caption("Hirsipuu")
-        self.display.fill((255, 255, 255))
-        font = pygame.font.SysFont("Chilanka", 60)
-        text = font.render("Hirsipuu", 1, (0, 0, 0))
+        self.display.fill((203, 180, 149))
+        font = pygame.font.SysFont("Lordina Solid", 80, bold=True, italic=False)
+        text = font.render("HIRSIPUU", True, (0, 0, 0))
         self.display.blit(text, (self.width/2 - text.get_width()/2, 30))
         return font
 

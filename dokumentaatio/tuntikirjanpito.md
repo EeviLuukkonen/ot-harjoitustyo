@@ -12,4 +12,5 @@
 | 20.4. | 3h   |  arkkitehtuurikuvaus, rakenteen, vaatimusmäärittelyn ja readmen päivitys, pylint- ja ulkoasuparannus |
 | 24.4. | 1h   |  words.txt-tiedosto sanojen valintaan lisätty  | 
 | 25.4. | 4h   |  3 uutta testiä, pylint-parannus, menu siirretty omaan kansioon, toiminnallisuusparannuksia |
-| yhteensä:  | 27h
+| 26.4. | 1h   |  display-päivitys, arkkitehtuurikuvauksen päivitys, viikko 5 viimeistely |
+| yhteensä:  | 28h

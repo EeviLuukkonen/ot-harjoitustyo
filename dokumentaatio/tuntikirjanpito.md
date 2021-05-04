@@ -15,5 +15,5 @@
 | 26.4. | 1h   |  display-päivitys, arkkitehtuurikuvauksen päivitys, viikko 5 viimeistely |
 | 29.4. | 2h   |  kello-ominaisuuden ja tietokannan suunnittelu ja koodausyritys  |
 | 3.5.  | 2h   |  debuggaus, kaatumisten korjaaminen ja docstring |
-| 4.5.  | 5h   |  sanoista näkyville ensimmäinen kirjain, häviö-ja voittoruutuun oikea sana, lint, testit, arkkitehtuurikuvaus ja käyttöohje  |
-| yhteensä:  | 32h
+| 4.5.  | 6h   |  sanoista näkyville ensimmäinen kirjain, häviö-ja voittoruutuun oikea sana, lint, testit, arkkitehtuurikuvaus ja käyttöohje  |
+| yhteensä:  | 38h

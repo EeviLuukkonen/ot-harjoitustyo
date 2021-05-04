@@ -13,4 +13,7 @@
 | 24.4. | 1h   |  words.txt-tiedosto sanojen valintaan lisätty  | 
 | 25.4. | 4h   |  3 uutta testiä, pylint-parannus, menu siirretty omaan kansioon, toiminnallisuusparannuksia |
 | 26.4. | 1h   |  display-päivitys, arkkitehtuurikuvauksen päivitys, viikko 5 viimeistely |
-| yhteensä:  | 28h
+| 29.4. | 2h   |  kello-ominaisuuden ja tietokannan suunnittelu ja koodausyritys  |
+| 3.5.  | 2h   |  debuggaus, kaatumisten korjaaminen ja docstring |
+| 4.5.  | 5h   |  sanoista näkyville ensimmäinen kirjain, häviö-ja voittoruutuun oikea sana, lint, testit, arkkitehtuurikuvaus ja käyttöohje  |
+| yhteensä:  | 32h

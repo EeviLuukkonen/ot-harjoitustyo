@@ -31,13 +31,14 @@ class StubDisplay:
     def draw_image(self, status, x, y):
         pass
     def draw_display(self, guessed, word, letters):
-        return "_ _"
-    def render_winscreen(self):
+        return []
+    def render_winscreen(self, word, result):
         pygame.quit()
-    def render_loosescreen(self):
+    def render_loosescreen(self, word):
+        pass
+    def draw_timer(self, current_time, start_time):
         pass
 
-# (display: Display, word: str, letters: list, status: int, clock: Clock, event_queue: EventQueue)
 class TestGameloop(unittest.TestCase):
     def setUp(self):
         self.letters = letter_positions(600, 700)
@@ -46,28 +47,36 @@ class TestGameloop(unittest.TestCase):
     def test_game_lost(self):
         events = [StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 6, StubEventQueue(events))
+        game = Gameloop(self.display, self.letters, 6, StubEventQueue(events), "A")
 
-        game.start("A")
+        game.start()
 
         self.assertTrue(game.check_if_lost())
 
     def test_game_won(self):
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 0, StubEventQueue(events))
+        game = Gameloop(self.display, self.letters, 0, StubEventQueue(events), "")
 
-        game.start("A")
+        game.start()
 
-        self.assertEqual(game.check_if_won("A"), True)
+        self.assertEqual(game.check_if_won(), True)
 
     def test_wrong_letter(self):
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 0, StubEventQueue(events))
+        game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BC")
 
-        game.start("B")
+        game.start()
 
-        self.assertEqual(game.status, 1)
+        self.assertEqual(game.status, 6)
 
+    def test_right_letter(self):
+        events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
+
+        game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BCA")
+
+        game.start()
+
+        self.assertEqual(game.status, 5)
 

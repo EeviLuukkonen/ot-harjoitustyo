@@ -10,5 +10,4 @@ class Clock:
     def get_ticks(self):
         return pygame.time.get_ticks()
 
-    def delay(self):
-        pygame.time.delay(100)
+        

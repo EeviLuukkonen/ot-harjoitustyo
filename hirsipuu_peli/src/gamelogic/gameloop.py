@@ -2,7 +2,6 @@ import math
 import pygame
 from ui.display import Display
 from gamelogic.clock import Clock
-import time
 
 class Gameloop():
     """Luokka, joka huolehtii pelinäkymän toiminnallisuudesta
@@ -20,8 +19,8 @@ class Gameloop():
 
         Args:
             display (Display): Display-olio, joka kuvaa pelialuetta
-            letters (list): Lista kirjainten sijanneista peliruudulla, mallia [x, y, letter, used (True/False)]
-            status (int): Tämänhetkinen pelitilanne, eli kuinka monta kertaa käyttäjä on arvannut väärin
+            letters (list): Kirjainten sijannit peliruudulla [x, y, letter, used (True/False)]
+            status (int): Tämänhetkinen pelitilanne, kuinka monta kertaa käyttäjä arvannut väärin
             event_queue (EventQueue): EventQueue-olio, joka kuvaa pelin tapahtumia
             word (str): Arvattava sana
         """
@@ -34,22 +33,25 @@ class Gameloop():
         self.clock = Clock()
 
     def start(self):
-        """Metodi, joka ylläpitää pelinäkymää 
+        """Metodi, joka ylläpitää pelinäkymää
         """
+        start_time = self.clock.get_ticks()
         while True:
             if self.check_if_won():
-                self.win()
+                self.win(start_time)
+                break
             elif self.check_if_lost():
                 self.loose()
-            else:  # render game
+            else:
+                self.clock.tick(25)
                 self.display.draw_window()
                 self.display.draw_image(self.status, 60, 150)
                 self.guessed = self.display.draw_display(self.guessed, self.word, self.letters)
-            # check events
+                self.display.draw_timer(self.clock.get_ticks(), start_time)
+
             if self.events() is False:
                 break
-            self.clock.tick(60)
-            
+
     def check_if_won(self):
         """Metodi, joka tarkistaa, onko peli voitettu
 
@@ -86,11 +88,16 @@ class Gameloop():
                         self.guessed.append(letter[2])
                         if letter[2] not in self.word:
                             self.status += 1
+                            return True
 
-    def win(self):
+    def win(self, start_time):
         """Metodi, joka renderöi voittoruudun
         """
-        self.display.render_winscreen(self.word)
+        result = self.clock.get_ticks()-start_time
+        while True:
+            self.display.render_winscreen(self.word, result)
+            if self.events() is False:
+                break
 
     def loose(self):
         """Metodi, joka renderöi häviöruudun

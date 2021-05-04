@@ -6,7 +6,7 @@ from ui.display import Display
 
 class Menu:
     """ Luokka, jossa on menu-näkymän toiminnallisuus.
-        
+
         Attributes:
             display: Display-olio, joka kuvaa pelialuetta
             event_queue: EventQueue-olio, joka kuvaa pelin tapahtumia
@@ -15,7 +15,7 @@ class Menu:
     """
     def __init__(self, display: Display, event_queue, width, height):
         """ Luokan konstruktori, joka luo uuden menu-olion.
-        
+
         Args:
             display: Display-olio, joka kuvaa pelialuetta
             event_queue: EventQueue-olio, joka kuvaa pelin tapahtumia
@@ -70,5 +70,4 @@ class Menu:
                     letters = letter_positions(self.width,self.height)
                     game = Gameloop(self.display,letters,0,self.event_queue, word.upper())
                     game.start()
-                
         return True

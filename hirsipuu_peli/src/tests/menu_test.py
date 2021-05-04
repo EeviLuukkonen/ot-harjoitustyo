@@ -31,6 +31,14 @@ class StubEventQueue3:
     def get_pos(self):
         return (303, 523)
 
+class StubEventQueue4:
+    def __init__(self, events):
+        self.events = events
+    def get(self):
+        return self.events
+    def get_pos(self):
+        return (1,1)
+
 class StubDisplay:
     def __init__(self):
         self.width = 600
@@ -43,10 +51,12 @@ class StubDisplay:
     def draw_image(self, status, x, y):
         pass
     def draw_display(self, guessed, word, letters):
-        return "_ _"
-    def render_winscreen(self):
+        return []
+    def render_winscreen(self, word):
         pygame.quit()
-    def render_loosescreen(self):
+    def render_loosescreen(self, word):
+        pass
+    def draw_timer(self,current_time, start_time):
         pass
 
 class TestMenu(unittest.TestCase):

@@ -2,9 +2,11 @@
 
 ## Ohjelman rakenne
 
-Sovelluksen pakkausrakenne on tällä hetkellä seuraava:
+Sovelluksen koodin pakkausrakenne on seuraava:
 
-![IMG_2067](https://user-images.githubusercontent.com/75749790/116064853-14892b00-a68f-11eb-8d9d-8d5df94e81ff.jpg)
+![Screenshot from 2021-05-04 17-48-26](https://user-images.githubusercontent.com/75749790/117023351-b4832c00-ad01-11eb-97df-c78ce285850e.png)
+
+Pakkaus ui sisältää käyttöliittymästä ja gamelogic sovelluslogiikasta vastaavan koodin. Words-pakkauksessa on tekstitiedosto peliin arvottavia sanoja, images-kansiossa puolestaan kuvatiedostot peliä varten.
 
 ## Käyttöliittymä
 
@@ -15,9 +17,14 @@ Sovelluksen käyttöliittymä on toteutettu hakemiston ui luokkaan Display ja si
 - voittoruutu
 - häviöruutu
 
+Käyttöliittymä on eriytetty sovelluslogiikasta, mutta kaikki näkymät on toteutettu metodeina samaan luokkaan siksi, että näkymissä on paljon samoja ominaisuuksia toisiinsa nähden.
+
 ## Sovelluslogiikka ja toiminnallisuudet
 
-Sovelluslogiikka muodostuu hakemiston gamelogic luokista Menu sekä Gameloop, joihin on metodeina toteutettu pelin toiminnallisuus.
+Sovelluslogiikka muodostuu hakemiston gamelogic luokista Menu, Gameloop, EventQueue ja Clock, joihin on metodeina toteutettu pelin toiminnallisuus. Luokkien välisiä suhteita kuvaa oheinen kaavio:
+
+![Screenshot from 2021-05-04 18-04-38](https://user-images.githubusercontent.com/75749790/117025222-65d69180-ad03-11eb-8a38-78f8c6af072c.png)
+
 
 ### Pelin aloittaminen ja menun toiminta
 

@@ -1,6 +1,15 @@
 
 def letter_positions(width, height):
-    letters = []  # [x, y, letter, used (True/False)]
+    """Funktio, joka tallettaa kirjainnappien sijainnit 
+
+    Args:
+        width (int): peliruudun leveys
+        height (int): peliruudun korkeus
+        
+    Returns:
+        Lista, jossa on kirjaimet, niiden sijainnit ja False-arvo (onko kirjain jo arvattu)
+    """
+    letters = []  # 
     rad = 20
     gap = 15
     start_x = width - (14*rad+12*gap)

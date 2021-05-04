@@ -54,43 +54,53 @@ class Display():
         self.display.blit(self.images[status], (x, y))
 
     def draw_display(self, guessed, word, letters):
-        self.draw_newword()
-        # draw buttons and letters
-        for letter in letters:
-            if letter[3] is False:
-                pygame.draw.circle(self.display, (0, 0, 0),(letter[0], letter[1]), 20, 2)
-                letter_font = pygame.font.SysFont("Chilanka", 30)
-                letter_text = letter_font.render(letter[2], 1, (0, 0, 0))
-                self.display.blit(letter_text, (letter[0]-12, letter[1]-12))
         # draw word
         display_word = ""
         word_font = pygame.font.SysFont("Arial", 25)
-        for i in word:
-            if i in guessed:
-                display_word += i + " "
+        for i in range(len(word)):
+            if i == 0:
+                display_word += word[i] + " "
+                guessed.append(word[i])
+            elif word[i] in guessed:
+                display_word += word[i] + " "
             else:
                 display_word += "_ "
         display_text = word_font.render(display_word, 1, (0, 0, 0))
         self.display.blit(display_text, (270, 240))
 
+        self.draw_newword()
+        # draw buttons and letters
+        for letter in letters:
+            if letter[3] is False and letter[2] not in guessed:
+                pygame.draw.circle(self.display, (0, 0, 0),(letter[0], letter[1]), 20, 2)
+                letter_font = pygame.font.SysFont("Chilanka", 30)
+                letter_text = letter_font.render(letter[2], 1, (0, 0, 0))
+                self.display.blit(letter_text, (letter[0]-12, letter[1]-12))
+
         pygame.display.update()
+        return guessed
 
-        return display_word
+    def render_correct_answer(self, word):
+        font = pygame.font.SysFont("latoheavy", 40)
+        text = font.render(f"Sana oli: {word}", 1, (0,0,0))
+        self.display.blit(text, (self.width/2 - text.get_width()/2, 295))
 
-    def render_winscreen(self):
+    def render_winscreen(self, word):
         font = self.draw_window()
         self.draw_newword()
         text = font.render("Voitit!", 1, (224, 3, 65))
         self.display.blit(
-            text, (self.width/2 - text.get_width()/2, self.height/2 - text.get_height()/2))
+            text, (self.width/2 - text.get_width()/2, 230))
+        self.render_correct_answer(word)
         pygame.display.update()
 
-    def render_loosescreen(self):
+    def render_loosescreen(self, word):
         font = self.draw_window()
         self.draw_newword()
         text = font.render("Hävisit!", 1, (224, 3, 65))
         self.display.blit(text, (self.width/2 - text.get_width()/2, 200))
-        self.draw_image(6, 200, self.height/2)
+        self.draw_image(6, 200, self.height/2+10)
+        self.render_correct_answer(word)
         pygame.display.update()
 
     def draw_newword(self):

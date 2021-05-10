@@ -2,6 +2,8 @@ import math
 import pygame
 from ui.display import Display
 from gamelogic.clock import Clock
+from highscores import Highscore
+from database_connection import get_database_connection
 
 class Gameloop():
     """Luokka, joka huolehtii pelinäkymän toiminnallisuudesta
@@ -14,7 +16,7 @@ class Gameloop():
         guessed: Käyttäjän jo arvatut kirjaimet
         word =  Arvattava sana
     """
-    def __init__(self, display: Display, letters: list, status: int, event_queue, word):
+    def __init__(self, display: Display, letters: list, status: int, event_queue, word, level):
         """Luokan konstruktori, joka luo uuden pelin
 
         Args:
@@ -31,6 +33,8 @@ class Gameloop():
         self.event_queue = event_queue
         self.word = word
         self.clock = Clock()
+        self.level = level
+        self.highscore = Highscore(get_database_connection())
 
     def start(self):
         """Metodi, joka ylläpitää pelinäkymää
@@ -94,8 +98,10 @@ class Gameloop():
         """Metodi, joka renderöi voittoruudun
         """
         result = self.clock.get_ticks()-start_time
+        self.highscore.create(result, self.level)
+        db = self.highscore.find_all()
         while True:
-            self.display.render_winscreen(self.word, result)
+            self.display.render_winscreen(self.word, result, db)
             if self.events() is False:
                 break
 

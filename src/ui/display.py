@@ -136,7 +136,7 @@ class Display():
         text = font.render(f"Aikaa kului: {str((time)/1000).zfill(2)} sekuntia", 1, (0,0,0))
         self.display.blit(text, (self.width/2 - text.get_width()/2, 335))
 
-    def render_winscreen(self, word, result):
+    def render_winscreen(self, word, result, db):
         """Metodi, joka piirtäää voittoruudun
 
         Args:
@@ -149,7 +149,24 @@ class Display():
             text, (self.width/2 - text.get_width()/2, 230))
         self.render_correct_answer(word)
         self.render_time_spent(result)
+        self.scoreboard(db)
         pygame.display.update()
+
+    def scoreboard(self,db):
+        font = pygame.font.SysFont("latoheavy", 30)
+        start_y = 500
+        start_score = 1
+        tulostaulu = font.render("TULOSTAULU:", 1, (0,0,0))
+        info = font.render("{:<20}{:<25}{:<20}".format("sija","aika (sek)", "taso"), 1, (0,0,0))
+        self.display.blit(tulostaulu, (self.width/2 - tulostaulu.get_width()/2, 405))
+        self.display.blit(info, (100, 460))
+        for row in db:
+            time = str((row["time"])/1000).zfill(2)
+            level = str(row["level"])
+            text = font.render("{:<20} {:<25} {:<20}".format(start_score,time,level), 1, (0,0,0))
+            self.display.blit(text, (100, start_y))
+            start_y += 30
+            start_score += 1
 
     def render_loosescreen(self, word):
         """Metodi, joka piirtää häviöruudun

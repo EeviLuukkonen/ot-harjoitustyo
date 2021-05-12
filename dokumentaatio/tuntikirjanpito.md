@@ -16,4 +16,6 @@
 | 29.4. | 2h   |  kello-ominaisuuden ja tietokannan suunnittelu ja koodausyritys  |
 | 3.5.  | 2h   |  debuggaus, kaatumisten korjaaminen ja docstring |
 | 4.5.  | 6h   |  sanoista näkyville ensimmäinen kirjain, häviö-ja voittoruutuun oikea sana, lint, testit, arkkitehtuurikuvaus ja käyttöohje  |
-| yhteensä:  | 38h
+| 10.5. | 5h   |  tietokannan ja tulostaulun lisäys |
+| 12.5. | 5h   |  viimeistelyä, parantelua (testit, lint, koodi), dokumentaation tekemistä  |
+| yhteensä:  | 48h

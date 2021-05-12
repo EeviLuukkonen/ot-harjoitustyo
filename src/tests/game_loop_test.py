@@ -53,7 +53,14 @@ class TestGameloop(unittest.TestCase):
 
         self.assertTrue(game.check_if_lost())
 
+    def test_game_won(self):
+        events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
+        game = Gameloop(self.display, self.letters, 0, StubEventQueue(events), "", "helppo")
+
+        game.start()
+
+        self.assertEqual(game.check_if_won(), True)
 
     def test_wrong_letter(self):
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
@@ -72,4 +79,3 @@ class TestGameloop(unittest.TestCase):
         game.start()
 
         self.assertEqual(game.status, 5)
-

@@ -1,6 +1,3 @@
-import sqlite3
-from database_connection import get_database_connection
-
 class Highscore():
     def __init__(self, connection):
         self._connection = connection

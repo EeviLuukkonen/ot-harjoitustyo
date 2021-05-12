@@ -44,7 +44,7 @@ class Gameloop():
             if self.check_if_won():
                 self.win(start_time)
                 break
-            elif self.check_if_lost():
+            if self.check_if_lost():
                 self.loose()
             else:
                 self.clock.tick(25)
@@ -93,15 +93,16 @@ class Gameloop():
                         if letter[2] not in self.word:
                             self.status += 1
                             return True
+        return True
 
     def win(self, start_time):
         """Metodi, joka renderöi voittoruudun
         """
         result = self.clock.get_ticks()-start_time
         self.highscore.create(result, self.level)
-        db = self.highscore.find_all()
+        database = self.highscore.find_all()
         while True:
-            self.display.render_winscreen(self.word, result, db)
+            self.display.render_winscreen(self.word, result, database)
             if self.events() is False:
                 break
 

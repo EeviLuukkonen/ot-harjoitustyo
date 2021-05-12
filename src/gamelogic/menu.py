@@ -63,7 +63,7 @@ class Menu:
                 elif pos[1][0]+pos[1][2]>mou[0]>pos[1][0] and pos[1][1]+pos[1][3]>mou[1]>pos[1][1]:
                     word = words.medium_word()
                     letters = letter_positions(self.width,self.height)
-                    game = Gameloop(self.display,letters,0,self.event_queue, word.upper(), "keskivaikea")
+                    game=Gameloop(self.display,letters,0,self.event_queue,word.upper(),"keskivaikea")
                     game.start()
                 elif pos[0][0]+pos[2][2]>mou[0]>pos[2][0] and pos[2][1]+pos[2][3]>mou[1]>pos[2][1]:
                     word = words.hard_word()

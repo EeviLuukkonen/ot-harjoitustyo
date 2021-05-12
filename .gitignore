@@ -13,3 +13,4 @@
 *.py[cod]
 *$py.class
 data/scores.sqlite
+data/test-scores.sqlite

@@ -8,5 +8,5 @@ try:
 except FileNotFoundError:
     pass
 
-SCORES_FILENAME = os.getenv("SCORES") or "scores.sqlite"
+SCORES_FILENAME = os.getenv("SCORES_FILENAME") or "scores.sqlite"
 SCORES_FILEPATH = os.path.join(dirname, '..', 'data', SCORES_FILENAME)

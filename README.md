@@ -12,6 +12,7 @@ Sovellus on testattu versiolla 3.8.5. Toimivaan sovellukseen vaaditaan vähintä
 * [arkkitehtuurikuvaus](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuurikuvaus.md)
 * [käyttöohje](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 * [vaatimusmäärittely](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/vaatimuusmaarittely.md)
+* [testausdokumentti](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 * [työaikakirjanpito](https://github.com/EeviLuukkonen/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
 
 ## Sovelluksen asentaminen ja avaaminen
@@ -21,8 +22,13 @@ Sovellus on testattu versiolla 3.8.5. Toimivaan sovellukseen vaaditaan vähintä
 ```bash
 poetry install
 ```
+2. Alusta tietokanta komennolla
 
-2. Käynnistä sovellus komennolla
+```
+poetry run invoke build
+```
+
+3. Käynnistä sovellus komennolla
 
 ```bash
 poetry run invoke start

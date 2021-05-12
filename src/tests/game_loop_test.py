@@ -32,7 +32,7 @@ class StubDisplay:
         pass
     def draw_display(self, guessed, word, letters):
         return []
-    def render_winscreen(self, word, result):
+    def render_winscreen(self, word, result, db):
         pygame.quit()
     def render_loosescreen(self, word):
         pass
@@ -47,25 +47,18 @@ class TestGameloop(unittest.TestCase):
     def test_game_lost(self):
         events = [StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 6, StubEventQueue(events), "A")
+        game = Gameloop(self.display, self.letters, 6, StubEventQueue(events), "A", "helppo")
 
         game.start()
 
         self.assertTrue(game.check_if_lost())
 
-    def test_game_won(self):
-        events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 0, StubEventQueue(events), "")
-
-        game.start()
-
-        self.assertEqual(game.check_if_won(), True)
 
     def test_wrong_letter(self):
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BC")
+        game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BC", "helppo")
 
         game.start()
 
@@ -74,7 +67,7 @@ class TestGameloop(unittest.TestCase):
     def test_right_letter(self):
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
-        game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BCA")
+        game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BCA", "helppo")
 
         game.start()
 

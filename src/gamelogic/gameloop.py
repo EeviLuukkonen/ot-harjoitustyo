@@ -2,7 +2,7 @@ import math
 import pygame
 from ui.display import Display
 from gamelogic.clock import Clock
-from highscores import Highscore
+from repositories.highscores import Highscore
 from database_connection import get_database_connection
 
 class Gameloop():

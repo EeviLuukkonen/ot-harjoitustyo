@@ -4,18 +4,23 @@
 
 Sovellus on klassinen arvauspeli hirsipuu. Pelissä arvataan kirjain kirjaimelta satunnaista sanaa, josta on aluksi tiedossa vain pituus. Vääristä arvauksista tikku-ukko joutuu lähemmäksi hirttotuomiota, oikeista arvauksista sana muodostuu lähemmäksi ratkaisua.
 
+## Käyttäjät
+
+Sovelluksessa ei ole määritelty eri käyttäjiä, vaan peliä pelataan kirjautumatta. Jatkokehitysvaiheessa kirjautumismahdollisuus voisi tuoda sovellukseen ylläpitäjä- ja peruskäyttäjän käyttörooleja.
+
 ## Perusversion tarjoama toiminnallisuus
 
-- [x] Pelialueella näkyy hirsipuun aloitustilanne, satunnainen arvattava sana sekä aakkoset, joita voi klikata. 
-- [x] Käyttäjä arvailee sanassa esiintyviä kirjaimia klikkaamalla näytöllä näkyviä aakkosia.
-- [x] Mikäli kirjain on sanassa, se ilmestyy ruudulle oikeaan kohtaan
-- [x] Mikäli kirjainta ei ole sanassa, hirsipuu-piirros etenee
-- [x] Jos arvaa kuusi kertaa kirjaimen väärin, peli epäonnistuu
-- [x] Mikäli kaikki kirjaimet arvaa oikein, läpäisee pelin
+- Pelissä voi valita vaikeusasteen valikkonäkymästä.
+- Tasovalinnan jälkeen sovelluksessa näkyy hirsipuun aloitustilanne, satunnainen arvattava sana, aakkoset, joita voi klikata sekä aikalaskuri. 
+- Käyttäjä arvailee sanassa esiintyviä kirjaimia klikkaamalla näytöllä näkyviä aakkosia.
+- Mikäli kirjain on sanassa, se ilmestyy ruudulle oikeaan kohtaan.
+- Mikäli kirjainta ei ole sanassa, hirsipuupiirros etenee.
+- Jos arvaa kuusi kertaa kirjaimen väärin, peli epäonnistuu.
+- Mikäli kaikki kirjaimet arvaa oikein, läpäisee pelin.
+- Peli tallentaa jokaisella avauskerralla pelin suoritusajan ja näyttää voittoruudulla kunkin pelikerran parhaita tuloksia viiteen asti.
 
 ## Jatkokehitysideoita
 
-- [x] Peli avaa valikon, josta pääsee valitsemaan vaikeusasteen kolmesta tasosta
-- [x] Pelattavat sanat haetaan erillisestä tiedostosta vaikeustason mukaan
-- [ ] Aikaominaisuus: Mitä nopeammin sanan selvittää, sen parempi
-- [ ] Ennätysaikojen tallentaminen tietokantaan
+- Kirjautumismahdollisuus: pelaaja näkee kirjautumalla omat ennätystuloksensa, vaikka peli suljettaisiin välissä
+- Kaikkien käyttäjien yhteinen ennätystaulukko
+- Ennätystaulukot eriteltynä pelin vaikeustason mukaan

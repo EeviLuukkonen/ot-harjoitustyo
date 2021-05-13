@@ -21,6 +21,10 @@ Sovelluksen käyttöliittymä on toteutettu hakemiston ui luokkaan Display ja si
 
 Käyttöliittymä on eriytetty sovelluslogiikasta, mutta kaikki näkymät on toteutettu metodeina samaan luokkaan siksi, että näkymissä on paljon samoja ominaisuuksia toisiinsa nähden.
 
+## Tallennus
+
+Sovellus tallentaa tietokantaan peliaikoja. Tästä vastaa reposities-hakemiston luokka Highscores. Tietokannat scores.sqlite ja test-scores.sqlite löytyvät hakemistosta data. Sovelluksen juuren .env-tiedosto määrittelee tietokannan nimen.
+
 ## Sovelluslogiikka ja toiminnallisuudet
 
 Sovelluslogiikka muodostuu hakemiston gamelogic luokista Menu, Gameloop, EventQueue ja Clock, joihin on metodeina toteutettu pelin toiminnallisuus. Luokkien välisiä suhteita kuvaa oheinen kaavio:

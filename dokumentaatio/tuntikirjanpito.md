@@ -18,4 +18,5 @@
 | 4.5.  | 6h   |  sanoista näkyville ensimmäinen kirjain, häviö-ja voittoruutuun oikea sana, lint, testit, arkkitehtuurikuvaus ja käyttöohje  |
 | 10.5. | 5h   |  tietokannan ja tulostaulun lisäys |
 | 12.5. | 5h   |  viimeistelyä, parantelua (testit, lint, koodi), dokumentaation tekemistä  |
-| yhteensä:  | 48h
+| 13.5. | 3h   |  docstring loppuun, tietokantakokeiluja
+| yhteensä:  | 51h

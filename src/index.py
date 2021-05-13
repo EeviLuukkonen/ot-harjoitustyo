@@ -10,8 +10,8 @@ def main():
     width = 600
     height = 700
     win = pygame.display.set_mode((width, height))
-    initialize_database()
     images = load_images()
+    initialize_database()
     event_queue = EventQueue()
     display = Display(win, width, height, images)
     menu = Menu(display, event_queue, width, height)

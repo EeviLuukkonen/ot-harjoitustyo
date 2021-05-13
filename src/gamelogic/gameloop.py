@@ -14,7 +14,8 @@ class Gameloop():
         status: Tämänhetkinen pelitilanne, eli kuinka monta kertaa käyttäjä on arvannut väärin
         event_queue: EventQueue-olio, joka kuvaa pelin tapahtumia
         guessed: Käyttäjän jo arvatut kirjaimet
-        word =  Arvattava sana
+        word:  Arvattava sana
+        level: Vaikeustaso
     """
     def __init__(self, display: Display, letters: list, status: int, event_queue, word, level):
         """Luokan konstruktori, joka luo uuden pelin
@@ -25,6 +26,7 @@ class Gameloop():
             status (int): Tämänhetkinen pelitilanne, kuinka monta kertaa käyttäjä arvannut väärin
             event_queue (EventQueue): EventQueue-olio, joka kuvaa pelin tapahtumia
             word (str): Arvattava sana
+            level: Vaikeustaso
         """
         self.display = display
         self.letters = letters
@@ -79,6 +81,9 @@ class Gameloop():
 
     def events(self):
         """Metodi, joka tarkistaa pelinaikaiset tapahtumat
+
+        Returns:
+            False, jos peli lopetetaan, muuten True
         """
         for event in self.event_queue.get():
             if event.type == pygame.QUIT:

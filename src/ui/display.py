@@ -83,7 +83,6 @@ class Display():
             x: X-koordinaatti kuvan paikalle
             x: Y-koordinaatti kuvan paikalle
         """
-        # draw hangman
         self.display.blit(self.images[status], (x,y))
 
     def draw_display(self, guessed, word, letters):
@@ -121,6 +120,20 @@ class Display():
         pygame.display.update()
         return guessed
 
+    def draw_timer(self, current_time, start_time):
+        """Metodi, joka piirtää juoksevan peliajan ruudulle
+
+        Args:
+            current_time: tämänhetkinen aika pelin alusta
+            start_time: pelin aloitusaika
+        """
+        font = pygame.font.SysFont("Comicsans", 32)
+        counting_time = current_time - start_time
+        counting_seconds = str((counting_time)/1000).zfill(2)
+        timer = font.render(f"Aika: {counting_seconds}",1,(0,0,0))
+        self.display.blit(timer, (450,130))
+        pygame.display.update()
+
     def render_correct_answer(self, word):
         """Metodi, joka piirtää voitto- ja häviöruutuun arvatun sanan
 
@@ -131,16 +144,13 @@ class Display():
         text = font.render(f"Sana oli: {word}", 1, (0,0,0))
         self.display.blit(text, (self.width/2 - text.get_width()/2, 295))
 
-    def render_time_spent(self, time):
-        font = pygame.font.SysFont("latoheavy", 40)
-        text = font.render(f"Aikaa kului: {str((time)/1000).zfill(2)} sekuntia", 1, (0,0,0))
-        self.display.blit(text, (self.width/2 - text.get_width()/2, 335))
-
     def render_winscreen(self, word, result, db):
         """Metodi, joka piirtäää voittoruudun
 
         Args:
             word: Pelattu sana
+            result: peliaika sekunteina
+            db: Highscores-tietokannan max viisi parasta riviä
         """
         font = self.draw_window()
         self.draw_newword()
@@ -152,7 +162,22 @@ class Display():
         self.scoreboard(db)
         pygame.display.update()
 
+    def render_time_spent(self, time):
+        """Metodi, joka piirtää voitetun pelin keston ruudulle
+
+        Args:
+            time: kesto millisekunteina
+        """
+        font = pygame.font.SysFont("latoheavy", 40)
+        text = font.render(f"Aikaa kului: {str((time)/1000).zfill(2)} sekuntia", 1, (0,0,0))
+        self.display.blit(text, (self.width/2 - text.get_width()/2, 335))
+
     def scoreboard(self,db):
+        """Metodi, joka piirtää tulostaulun voittoruudulle
+
+        Args:
+            db: Highscores-tietokannan max viisi parasta riviä
+        """
         font = pygame.font.SysFont("latoheavy", 30)
         start_y = 500
         start_score = 1
@@ -190,11 +215,3 @@ class Display():
         pygame.draw.line(self.display, (0, 0, 0), (self.width-45,21),(self.width-30,6), 3)
         pygame.draw.line(self.display, (0, 0, 0), (self.width-40,5),(self.width-30,5), 2)
         pygame.draw.line(self.display, (0, 0, 0), (self.width-30,5),(self.width-30,15), 2)
-
-    def draw_timer(self, current_time, start_time):
-        font = pygame.font.SysFont("Comicsans", 32)
-        counting_time = current_time - start_time
-        counting_seconds = str((counting_time)/1000).zfill(2)
-        timer = font.render(f"Aika: {counting_seconds}",1,(0,0,0))
-        self.display.blit(timer, (450,130))
-        pygame.display.update()

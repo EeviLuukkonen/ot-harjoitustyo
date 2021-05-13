@@ -1,9 +1,21 @@
 import random
 
 class WordRepository:
+    """Luokka, joka arpoo sanan tiedostosta peliin
+    """
     def __init__(self, file_path):
+        """Konstruktori
+
+        Args:
+            file_path: polku sanatiedostoon
+        """
         self.file_path = file_path
     def easy_word(self):
+        """Metodi, joka arpoo helppotasoisen sanan
+
+        Returns:
+            satunnainen 4-5 kirjaiminen sana
+        """
         easy_words = []
         words = self.find_all()
         for i in words:
@@ -11,6 +23,11 @@ class WordRepository:
                 easy_words.append(i)
         return random.choice(easy_words)
     def medium_word(self):
+        """Metodi, joka arpoo keskitasoisen sanan
+
+        Returns:
+            satunnainen 6-9 kirjaiminen sana
+        """
         medium_words = []
         words = self.find_all()
         for i in words:
@@ -18,6 +35,11 @@ class WordRepository:
                 medium_words.append(i)
         return random.choice(medium_words)
     def hard_word(self):
+        """Metodi, joka arpoo vaikeatasoisen sanan
+
+        Returns:
+            satunnainen 10-14 kirjaiminen sana
+        """
         hard_words = []
         words = self.find_all()
         for i in words:
@@ -27,6 +49,11 @@ class WordRepository:
     def find_all(self):
         return self.read()
     def read(self):
+        """Metodi, joka lukee sanatiedoston rivit listaan
+
+        Returns:
+            lista kaikista sanoista
+        """
         words = []
         with open(self.file_path) as file:
             for row in file:

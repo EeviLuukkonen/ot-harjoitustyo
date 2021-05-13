@@ -40,11 +40,20 @@ class StubDisplay:
         pass
 
 class TestGameloop(unittest.TestCase):
+    """Testiluokka Gameloop-luokalle
+
+    Args:
+        unittest
+    """
     def setUp(self):
+        """SetUp-metodi, jossa alustetaan kirjainten sijainnit ja valeluokka Display
+        """
         self.letters = letter_positions(600, 700)
         self.display = StubDisplay()
 
     def test_game_lost(self):
+        """Metodi, joka testaa pelin häviämistä
+        """
         events = [StubEvent(pygame.QUIT)]
 
         game = Gameloop(self.display, self.letters, 6, StubEventQueue(events), "A", "helppo")
@@ -54,6 +63,8 @@ class TestGameloop(unittest.TestCase):
         self.assertTrue(game.check_if_lost())
 
     def test_wrong_letter(self):
+        """Metodi, joka testaa väärän kirjaimen painamista
+        """
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
         game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BC", "helppo")
@@ -63,6 +74,8 @@ class TestGameloop(unittest.TestCase):
         self.assertEqual(game.status, 6)
 
     def test_right_letter(self):
+        """Metodi, joka testaa oikean kirjaimen painamista
+        """
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
 
         game = Gameloop(self.display, self.letters, 5, StubEventQueue(events), "BCA", "helppo")

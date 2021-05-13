@@ -60,10 +60,19 @@ class StubDisplay:
         pass
 
 class TestMenu(unittest.TestCase):
+    """Testiluokka Menu-luokalle
+
+    Args:
+        unittest
+    """
     def setUp(self):
+        """SetUp-metodi, joka alustaa valeluokan Display
+        """
         self.display = StubDisplay()
 
     def test_menu_ok(self):
+        """Metodi, joka testaa, palauttaako menu_events false, jos mitään tasoa ei klikata
+        """
         events = [StubEvent(pygame.QUIT)]
         menu = Menu(self.display, StubEventQueue(events), 600, 700)
 
@@ -72,6 +81,8 @@ class TestMenu(unittest.TestCase):
         self.assertFalse(menu.menu_events([[241.5, 285, 117, 60], [209.0, 385, 182, 60], [244.5, 485, 111, 60]]))
 
     def test_easy_level_choosing_ok(self):
+        """Metodi, joka testaa helpon tason valinnan
+        """
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
         menu = Menu(self.display, StubEventQueue(events), 600, 700)
 
@@ -80,6 +91,8 @@ class TestMenu(unittest.TestCase):
         self.assertEqual(menu.event_queue.get_pos(), (303, 319))
 
     def test_medium_level_choosing_ok(self):
+        """Metodi, joka testaa keskivaikean tason valinnan
+        """
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
         menu = Menu(self.display, StubEventQueue2(events), 600, 700)
 
@@ -88,6 +101,8 @@ class TestMenu(unittest.TestCase):
         self.assertEqual(menu.event_queue.get_pos(), (303,414))
 
     def test_hard_level_choosing_ok(self):
+        """Metodi, joka testaa vaikean tason valinnan
+        """
         events = [StubEvent(pygame.MOUSEBUTTONDOWN), StubEvent(pygame.QUIT)]
         menu = Menu(self.display, StubEventQueue3(events), 600, 700)
 

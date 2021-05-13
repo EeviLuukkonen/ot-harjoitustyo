@@ -654,7 +654,6 @@ karhu
 uutistoimisto
 radio
 ympäristökeskus
-ensi-ilta
 ralli
 maajoukkue
 koko
@@ -904,7 +903,6 @@ osakilpailu
 sauna
 valtuutettu
 eduskuntavaali
-ala-aste
 menetys
 valokuva
 sankari
@@ -1001,7 +999,6 @@ tiedottaja
 keittiö
 alkupuoli
 perustuslaki
-vapaa-aika
 tuho
 kolmasosa
 kommentti
@@ -1118,7 +1115,6 @@ matkailija
 edusta
 luominen
 penni
-raaka-aine
 telakka
 ilmaisku
 strategia
@@ -1195,7 +1191,6 @@ seuraaja
 tasapaino
 arvostelu
 siipi
-tasa-arvo
 kuutio
 lisä
 jatkaminen
@@ -1234,7 +1229,6 @@ maanviljelijä
 osto
 suunnittelija
 uudistaminen
-linja-auto
 lasi
 virta
 hoitaminen
@@ -1446,7 +1440,6 @@ alennus
 puutarha
 tutkinta
 musta
-perjantai-ilta
 suola
 menettely
 sisäministeriö
@@ -1573,13 +1566,11 @@ vapaaehtoinen
 hylly
 rahaliitto
 hallituspuolue
-lauantai-ilta
 vakaus
 varusmies
 avain
 maanomistaja
 maatila
-torstai-ilta
 kohtelu
 taajama
 löytäminen
@@ -1634,9 +1625,7 @@ käänne
 muuri
 seikkailu
 nykypäivä
-maanantai-ilta
 puolustusministeriö
-tiistai-ilta
 kasvatus
 kaupunginosa
 valikoima
@@ -1655,7 +1644,6 @@ bisnes
 ottaminen
 temppu
 pitäjä
-te-keskus
 yritystoiminta
 vastine
 näytös
@@ -1721,7 +1709,6 @@ yhtiökokous
 euroalue
 iho
 kesäteatteri
-kuorma-auto
 osinko
 pako
 bensiini
@@ -1754,7 +1741,6 @@ tasku
 muistomerkki
 vilja
 tunnus
-hallinto-oikeus
 laituri
 talouspolitiikka
 aluepolitiikka
@@ -1904,7 +1890,6 @@ hälytys
 kustannusarvio
 avoimuus
 kurkku
-sunnuntai-ilta
 maantie
 metsätalousministeriö
 valmistuminen
@@ -1968,7 +1953,6 @@ saksa
 erikoiskoe
 yhteistoiminta
 passi
-pommi-isku
 profiili
 keula
 kuvataide
@@ -1991,7 +1975,6 @@ nauru
 jarru
 satanen
 seteli
-vuokra-asunto
 vartija
 neuvottelukunta
 vaihtuminen
@@ -2018,7 +2001,6 @@ osuuspankki
 eläminen
 muotoilu
 sika
-takaa-ajo
 asetus
 jännite
 työreformi
@@ -2032,7 +2014,6 @@ ylläpito
 areena
 läsnäolo
 valmennus
-aika-ajo
 erikoissairaanhoito
 kuutiometri
 poliisilaitos
@@ -2069,7 +2050,6 @@ touhu
 mainonta
 vihje
 kasvukeskus
-keski-ikä
 toimintatapa
 seurue
 aate
@@ -2235,7 +2215,6 @@ vääntö
 kansalaisopisto
 vaikute
 koru
-pinta-ala
 geeni
 kosketus
 käytös
@@ -2698,7 +2677,6 @@ ennakkosuosikki
 käynnistäminen
 laatiminen
 kiinalainen
-osa-alue
 teollisuusministeri
 sairaalahoito
 japanilainen
@@ -2755,8 +2733,6 @@ neuvonantaja
 flunssa
 yritysjohtaja
 pimeys
-itsenäistyminen
-liike-elämä
 reservi
 joustavuus
 puhelinyhtiö
@@ -2772,12 +2748,9 @@ kiusaaminen
 lahjakkuus
 taitaja
 uusimaa
-diplomi-insinööri
 epäselvyys
 kuvernööri
 opastus
-rumpu
-sota-aika
 terveyspalvelu
 epidemia
 filosofi
@@ -2900,7 +2873,6 @@ alkuerä
 ele
 hoitopaikka
 asukasluku
-levy-yhtiö
 myyntipäällikkö
 oikeuslaitos
 ruokavalio
@@ -3176,7 +3148,6 @@ juhlasali
 keskittäminen
 turvapaikanhakija
 julkaiseminen
-markkina-arvo
 sairastuminen
 sinilevä
 tutkimustyö
@@ -3239,7 +3210,6 @@ sakka
 valuuttarahasto
 keskushyökkääjä
 mafia
-haja-asutusalue
 häviäjä
 ikäraja
 jalkapalloliitto
@@ -3294,10 +3264,8 @@ keppi
 lamppu
 hiihtokeskus
 puolikas
-suomi-yhtiö
 veikkaus
 koitos
-maa-alue
 rikoskomisario
 solidaarisuus
 työtaistelu
@@ -3318,7 +3286,6 @@ mittakaava
 haastateltu
 ilkivalta
 onnettomuuspaikka
-raja-asema
 avohoito
 hauki
 nippu
@@ -3660,7 +3627,6 @@ pelastaminen
 turvavyö
 yrityskauppa
 nautinto
-öljy-yhtiö
 kansanmurha
 opetussuunnitelma
 pelipaikka
@@ -3917,7 +3883,6 @@ teurastamo
 työrauha
 työväline
 esitelmä
-huippu-urheilu
 hätäkeskus
 kaavailu
 liikennevalo
@@ -4172,7 +4137,6 @@ työvaliokunta
 uhkailu
 halukas
 jäsenkunta
-linja-autoasema
 lisärakentaminen
 lisätila
 näköala
@@ -4224,7 +4188,6 @@ häirintä
 järkytys
 lajittelu
 menestyjä
-murto-osa
 pienyrittäjä
 purku
 talvikausi
@@ -4321,7 +4284,6 @@ yhteiskoulu
 ykköstila
 kerto
 peikko
-perhe-elämä
 valitseminen
 varajäsen
 abortti
@@ -4367,7 +4329,6 @@ tarkistaminen
 huolenaihe
 psykiatria
 status
-taka-ala
 takapiha
 tarjoaminen
 tieliikenne
@@ -4443,7 +4404,6 @@ porvarihallitus
 seuraamus
 aisa
 esikoulu
-markkina-alue
 notkahdus
 nyrkkeilijä
 paperikone

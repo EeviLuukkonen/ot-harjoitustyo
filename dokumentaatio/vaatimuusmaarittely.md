@@ -17,10 +17,9 @@ Sovelluksessa ei ole määritelty eri käyttäjiä, vaan peliä pelataan kirjaut
 - Mikäli kirjainta ei ole sanassa, hirsipuupiirros etenee.
 - Jos arvaa kuusi kertaa kirjaimen väärin, peli epäonnistuu.
 - Mikäli kaikki kirjaimet arvaa oikein, läpäisee pelin.
-- Peli tallentaa jokaisella avauskerralla pelin suoritusajan ja näyttää voittoruudulla kunkin pelikerran parhaita tuloksia viiteen asti.
+- Peli tallentaa jokaisella avauskerralla pelin suoritusajan ja näyttää voittoruudulla parhaita tuloksia viiteen asti.
 
 ## Jatkokehitysideoita
 
 - Kirjautumismahdollisuus: pelaaja näkee kirjautumalla omat ennätystuloksensa, vaikka peli suljettaisiin välissä
-- Kaikkien käyttäjien yhteinen ennätystaulukko
 - Ennätystaulukot eriteltynä pelin vaikeustason mukaan
